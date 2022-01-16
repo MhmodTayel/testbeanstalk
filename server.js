@@ -8,6 +8,13 @@ app.get('/', (req, res) => {
     .end();
 });
  
+app.get('/tayel', (req, res) => {
+  res
+    .status(200)
+    .send('Hello Tayel from beanstalk')
+    .end();
+});
+ 
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
