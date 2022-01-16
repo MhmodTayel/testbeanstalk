@@ -15,6 +15,13 @@ app.get('/tayel', (req, res) => {
     .end();
 });
  
+app.use('*', (req, res) => {
+  res
+    .status(404)
+    .send('404 not found')
+    .end();
+});
+ 
 // Start the server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
